@@ -1,0 +1,55 @@
+<div class="p-grid">
+    <div class="p-col">
+      <div class="p-card">
+        <h5>Crear Nueva Categoría</h5>
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+          <div class="p-field">
+            <label for="name">Nombre</label>
+            <input id="name" type="text" pInputText formControlName="name" />
+            <div *ngIf="formulario.get('name')?.invalid && formulario.get('name')?.touched" class="p-error">El nombre es obligatorio</div>
+          </div>
+          <div class="p-field">
+            <label for="description">Descripción</label>
+            <input id="description" type="text" pInputText formControlName="description" />
+          </div>
+          <div class="p-field">
+            <button pButton type="submit" label="Crear Categoria"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="p-grid">
+    <div class="p-col">
+      <div class="p-card">
+        <h5>Lista de Categorías</h5>
+        <ul>
+          <ng-container *ngFor="let category of categories">
+            <li>
+              <div *ngIf="!category.editing; else editCategoryTemplate">
+                {{ category.name }} ({{ category.description }})
+                <button pButton icon="pi pi-pencil" (click)="toggleEditing(category)" class="p-button-rounded p-button-text"></button>
+                <button pButton icon="pi pi-trash" (click)="deleteCategory(category)" class="p-button-rounded p-button-text"></button>
+              </div>
+              <ng-template #editCategoryTemplate>
+                <form [formGroup]="categoryForm">
+                  <div class="p-field">
+                    <input type="text" pInputText formControlName="name" />
+                  </div>
+                  <div class="p-field">
+                    <input type="text" pInputText formControlName="description" />
+                  </div>
+                  <div class="p-field">
+                    <button pButton type="button" label="Cancelar" severity="danger" (click)="toggleEditing(category)"></button>
+                    <button pButton type="button" label="Guardar" (click)="saveCategory(category)"></button>
+                  </div>
+                </form>
+              </ng-template>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

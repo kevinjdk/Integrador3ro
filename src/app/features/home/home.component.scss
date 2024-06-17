@@ -1,0 +1,60 @@
+.card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+/* ////////////////////////////// */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Ajusta según la altura de tu nav y footer */
+}
+
+.background-container {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.content-container {
+  display: flex;
+  background-color: #ebe9da; /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  /* max-width: 1200px; */
+  box-sizing: border-box;
+}
+
+.text-buttons-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.gallery-container {
+  flex: 1;
+}
+
+p-footer {
+  background-color: #ebe9da;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #ebe9da;
+  width: 100%;
+  box-sizing: border-box;
+}

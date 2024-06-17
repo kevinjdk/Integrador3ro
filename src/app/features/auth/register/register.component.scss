@@ -1,0 +1,83 @@
+/* .card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: "Manrope", sans-serif;
+  } */
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Manrope", sans-serif;
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select,
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container .error-message {
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+    font-family: "Manrope", sans-serif;
+}
+
+  .custom-button1 {
+    width: 100%;
+    background-color: black; /* Fondo blanco */
+    color: white; /* Letras negras */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /*  Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa el ratón */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves para el fondo y el color */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .custom-button1:hover {
+    background-color: white; /* Fondo negro cuando se pasa el ratón por encima */
+    color: black; /* Letras blancas cuando se pasa el ratón por encima */
+  }
+  .custom-button2 {
+    margin-top: 10px;
+    width: 100%;
+    background-color: white; /* Fondo blanco */
+    color: black; /* Letras negras */
+    border: 2px solid black; /* Bordes negros */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa el ratón */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves para el fondo y el color */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .custom-button2:hover {
+    background-color: black; /* Fondo negro cuando se pasa el ratón por encima */
+    color: white; /* Letras blancas cuando se pasa el ratón por encima */
+  }

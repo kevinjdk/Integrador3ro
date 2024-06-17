@@ -1,0 +1,54 @@
+<!-- src/app/product/product.component.html -->
+<h2>Productos</h2>
+<div class="card">
+  <p-carousel 
+    [value]="products" 
+    [numVisible]="3" 
+    [numScroll]="1" 
+    [circular]="true" 
+    [responsiveOptions]="responsiveOptions"
+    autoplayInterval="2000">
+      <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 p-3">
+          <div class="mb-3">
+            <div class="relative mx-auto">
+              <img style="width: 250px; height: 250px;" src="{{ product.image }}" [alt]="product.name" class="w-full border-round" />
+            </div>
+          </div>
+          <div class="mb-3 font-medium">{{ product.name }}</div>
+          <div class="flex justify-content-between align-items-center">
+            <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>
+            <span>
+              <p-button icon="pi pi-shopping-cart" styleClass="ml-2" (click)="addToCart(product)" />
+            </span>
+          </div>
+        </div>
+      </ng-template>
+  </p-carousel>
+</div>
+<div class="card">
+  <p-carousel 
+    [value]="productos" 
+    [numVisible]="3" 
+    [numScroll]="1" 
+    [circular]="true" 
+    [responsiveOptions]="responsiveOptions"
+    autoplayInterval="2000">
+      <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 p-3">
+          <div class="mb-3">
+            <div class="relative mx-auto">
+              <img style="width: 250px; height: 250px;" src="{{ product.image }}" [alt]="product.name" class="w-full border-round" />
+            </div>
+          </div>
+          <div class="mb-3 font-medium">{{ product.name }}</div>
+          <div class="flex justify-content-between align-items-center">
+            <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>
+            <span>
+              <p-button icon="pi pi-shopping-cart" styleClass="ml-2" (click)="addToCart(product)" />
+            </span>
+          </div>
+        </div>
+      </ng-template>
+  </p-carousel>
+</div>

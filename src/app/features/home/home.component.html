@@ -1,0 +1,26 @@
+<div class="background-container">
+    <div class="content-container">
+      <div class="text-buttons-container">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>✨Lo nuevo y lo mejor de ÖZIN AQUÍ ✨</h1>
+<!--         <h2>Crea nuevos looks</h2> -->
+        <p-button [routerLink]="['/productos']" label="COMPRAR AHORA" severity="info" />
+      </div>
+      <div class="gallery-container">
+        <p-galleria 
+          [value]="images" 
+          [autoPlay]="true"
+          [numVisible]="5" 
+          [circular]="true" 
+          [showItemNavigators]="true" 
+          [showThumbnails]="false" 
+          [responsiveOptions]="responsiveOptions" 
+          [containerStyle]="{ 'max-width': '640px' }">
+          <ng-template pTemplate="item" let-item>
+            <img [src]="item.itemImageSrc" style=" width: 65000px; height:800px; display: block;" />
+          </ng-template>
+        </p-galleria>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<p-card header="Tu orden se ha generado con exito"  >
+    <div class="texto">
+        <p>
+            Hola, gracias por comprar en ÖZIN, tu orden se ha generado con exito. Tu factura se ha enviado a tu email
+        </p>
+    </div>
+    <ng-template pTemplate="footer">
+        <div class="flex gap-3 mt-1" >
+            <p-button [routerLink]="['/productos']" label="Seguir Comprando" icon="pi pi-arrow-right" styleClass="ml-2" [raised]="true"></p-button>
+        </div>
+    </ng-template>
+</p-card>

@@ -1,0 +1,20 @@
+<p-card header="Tu Carrito">
+  <div *ngIf="cart.length === 0">El carrito está vacío</div>
+  <div *ngFor="let product of cart" class="cart-item">
+    <img class="product-image" src="{{ product.image }}" [alt]="product.name" />
+    <div class="product-details">
+      <div class="font-medium">{{ product.name }}</div>
+      <div>Cantidad: {{ product.quantity }}</div>
+      <div>Precio: {{ '$' + product.price }}</div>
+      <div>Total: {{ '$' + (product.price * product.quantity) }}</div>
+      <p-button icon="pi pi-plus" styleClass="ml-2" (click)="increaseQuantity(product)"  [raised]="true"></p-button>
+    </div>
+    <p-button icon="pi pi-trash" styleClass="ml-2" (click)="removeFromCart(product)" label="Eliminar"></p-button>
+  </div>
+  <ng-template pTemplate="footer">
+    <div class="text-right mt-3">
+      <div class="font-bold">Total a Pagar: {{ '$' + getTotal() }}</div>
+      <p-button label="Pagar" [routerLink]="['/compra']"></p-button>
+    </div>
+  </ng-template>
+</p-card>
